@@ -1,0 +1,178 @@
+export { hack as theme } from 'mdx-deck/themes';
+import { Split } from 'mdx-deck/layouts';
+import { Image } from 'mdx-deck';
+
+# Poll Time
+
+---
+
+# Poll Time
+
+How many are Cloud-savvy?
+
+---
+
+# Poll Time
+
+How many people have scripted automation?
+
+---
+
+# What is Terraform?
+
+---
+
+# What is Terraform?
+
+- Treat infrastructure just like applications
+- Declarative syntax
+- Can be version controlled, peer-reviewed
+- Remembers the state of the world
+- Applies the new desired state of the world
+- Is multi-cloud
+- Is more than cloud
+
+---
+
+```terraform
+provider "aws" {
+  access_key = "ACCESS_KEY_HERE"
+  secret_key = "SECRET_KEY_HERE"
+  region     = "us-east-1"
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-0d729a60"
+  instance_type = "t2.micro"
+}
+```
+
+---
+
+```terraform
+provider "dominos" {
+  first_name = "My"
+  last_name = "Name"
+  email_address = "my@name.com"
+  phone_number = "15555555555"
+
+  credit_card {
+    ...
+  }
+}
+
+resource "dominos_order" "order" {
+  address_api_object = ""
+  item_codes = [""]
+  store_id = ""
+}
+```
+
+---
+
+# What Terraform is NOT
+
+---
+
+# What Terraform is NOT
+
+- Replacement for config management
+- An automation tool by itself
+- Silver bullet multi-cloud
+- Migration tool
+
+---
+
+# Setting the stage
+
+---
+
+## We know we can...
+
+- Can run AWS commands locally
+- Can run terraform locally
+- Can open files with StreamDeck
+- Combine the 3? YES
+
+---
+
+# How did we get here?
+
+---
+
+# How did we get here?
+
+- Idea developed live on a Twitch Stream
+- Idea evolved to a working proof of concept
+- Eventually became containerized and portable
+- And now we're showing it off!
+
+---
+
+# How this should work
+
+We need a speedy volunteer...
+
+---
+
+<Image src='images/workflow.png' size='max-width: 50%;' />
+
+---
+
+# Prime the state
+
+---
+
+<Image src='images/state.png' />
+
+---
+
+# Simple Demo
+
+Let's make a thing in the cloud!
+
+---
+
+<Image src='images/demo1.png' />
+
+---
+
+# A use case to think about
+
+- Temporary, secure resources
+- Offload processing
+- Async processes, free up user's machine
+
+---
+
+<Image src='images/demo1-supplemental' />
+
+---
+
+# But, it can destroy what it creates
+
+Anything tracked in Terraform state can be modified or destroyed.
+
+Including things like local files and keys.
+
+---
+
+# Destroy all the things
+
+---
+
+# Another Demo
+
+---
+
+<Image src='images/demo2.png' />
+
+---
+
+# Destroy all the things!
+
+---
+
+# What's next
+
+[Start Here](https://github.com/cleanslate-technology-group/indy-cloud-conf-2019)
